@@ -1,0 +1,122 @@
+/* ============================================
+   MODAL OVERLAY
+   ============================================ */
+.parent-modal {
+  position: fixed;
+  inset: 0; /* Shorthand for top: 0, right: 0, bottom: 0, left: 0 */
+  background-color: var(--modal-bg);
+  z-index: 1000; /* Increased from 100 for better stacking */
+  padding-top: 2rem; /* Moved from .modal margin-top */
+  backdrop-filter: blur(3px);
+}
+
+.parent-modal{
+  display: none;
+}
+
+/* ============================================
+   MODAL CONTENT
+   ============================================ */
+.parent-modal .modal {
+  width: 75%;
+  max-width: 500px; /* Added max-width for better control */
+  border-radius: 25px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  animation: modalSlideIn 0.4s ease forwards; /* Changed duration and easing */
+}
+
+/* ============================================
+   MODAL NAVIGATION LINKS
+   ============================================ */
+.modal .modal-links li {
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+/* Remove border from last item */
+.modal .modal-links li:last-child {
+  border: none;
+}
+
+/* Special styling for close button container */
+.modal .modal-links li:first-child {
+  text-align: right;
+  padding: 0;
+  border: none;
+  margin-bottom: -10px; /* Pull up to align with top */
+}
+
+/* Link Styles */
+.modal .modal-links li a {
+  color: var(--text-h);
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  display: block; /* Full width clickable area */
+  padding: 4px 0; /* Improved touch target */
+  padding-left: 25px;
+}
+
+.modal .modal-links li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 15px;
+  background-color: var(--sub-container-bg);
+}
+
+/* ============================================
+   CLOSE BUTTON
+   ============================================ */
+.modal .close-btn {
+  height: 25px;
+  width: 25px;
+  display: inline-flex; /* Better icon alignment */
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.modal .close-btn .icon-close {
+  font-size: 15px;
+  color: var(--text-h);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal .close-btn .icon-close:hover {
+  font-size: 20px;
+  color: var(--red);
+  opacity: 1;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes modalSlideIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Mobile: Show hamburger menu, hide desktop nav */
+@media (max-width: 750px) {
+  .parent-modal{
+    display: initial;
+  }
+}

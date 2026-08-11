@@ -1,0 +1,72 @@
+/* ============================================
+   APP CONTAINER
+   ============================================ */
+*{
+  transition: all 0.5s;
+}
+.parentProject{
+  background-color: var(--bg);
+}
+.container {
+  border: 1px solid var(--border);
+  width: 86%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  background-color: var(--container-bg);
+  color: var(--text-h);
+}
+
+/* Section Dividers */
+.divider {
+  border-bottom: 1px solid var(--border);
+  margin: 3rem 0;
+}
+
+/* scroll to Top Button */
+.link-scroll2Top {
+  transition: all 0.5s;
+}
+
+.scroll2Top {
+  background-color: var(--btn-top);
+  color: var(--btn-top-text);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  position: fixed;
+  bottom: 2rem;
+  z-index: 10;
+  right: 3%;
+  transition: all 0.3s;
+  border: 1px solid var(--btn-top-border);
+}
+
+.scroll2Top:hover {
+  background-color: var(--btn-top-hover);
+}
+
+.scroll2Top:active {
+  scale: 0.9;
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 90%;
+    padding: 0 1.5rem;
+  }
+
+  .scroll2Top {
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 98%;
+  }
+}

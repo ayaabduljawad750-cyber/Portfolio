@@ -1,0 +1,68 @@
+.main-content {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+
+/* left section buttons */
+.main-content .left-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-content .left-section button {
+  background-color: var(--btn-bg);
+  color: var(--text-h);
+  width: 12rem;
+  padding: 10px 2px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+.main-content .left-section button:hover {
+  opacity: 1;
+}
+
+.main-content .left-section button:active {
+  scale: 0.9;
+}
+
+.main-content .left-section button.active {
+  opacity: 1;
+  border: 1px solid var(--blue);
+  font-weight: bold;
+  padding: 12px 0;
+}
+/* right section projects */
+
+.main-content .right-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px 16px;
+}
+
+@media (max-width: 1324px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-content .left-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-content .left-section button{
+    width: 10rem;
+    font-size: 15px;
+    padding: 8px;
+  }
+}

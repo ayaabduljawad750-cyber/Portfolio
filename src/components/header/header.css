@@ -1,0 +1,116 @@
+/* ============================================
+   HEADER LAYOUT
+   ============================================ */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  margin-top: 1rem;
+  position: relative; /* Added for z-index context */
+}
+
+/* ============================================
+   BUTTON STYLES (Menu & Theme Toggle)
+   ============================================ */
+.header .mode-btn,
+.header .menu-btn {
+  background-color: var(--sub-container-bg);
+  color: var(--text-h);
+  height: 50px;
+  width: 50px;
+  display: flex; /* Better icon centering */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.header .menu-btn {
+  display: none; /* Hidden on desktop */
+}
+
+/* Icon opacity for subtle appearance */
+.header .menu-btn i,
+.header .mode-btn i {
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.header .icon-sun{
+  color: var(--orange);
+}
+
+/* Hover States */
+.header .mode-btn:hover,
+.header .menu-btn:hover {
+  border-color: var(--orange);
+}
+
+.header .mode-btn:hover i,
+.header .menu-btn:hover i {
+  opacity: 1;
+}
+
+/* Active/Pressed State */
+.header .mode-btn:active,
+.header .menu-btn:active {
+  transform: scale(0.9);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.header nav {
+  background-color: var(--sub-container-bg);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.header nav .nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+/* Navigation Links */
+.header nav .nav-links li a {
+  color: var(--text-h);
+  opacity: 0.9;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  position: relative; /* For potential underline effects */
+}
+
+.header nav .nav-links li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 15px;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tablet: Hide spacer */
+@media (max-width: 900px) {
+  .header .padding-div {
+    display: none;
+  }
+}
+
+/* Mobile: Show hamburger menu, hide desktop nav */
+@media (max-width: 750px) {
+  .header nav {
+    display: none;
+  }
+  
+  .header .menu-btn {
+    display: flex; /* Changed from 'initial' to 'flex' for consistency */
+  }
+}

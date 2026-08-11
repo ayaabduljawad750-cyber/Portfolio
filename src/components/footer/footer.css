@@ -1,0 +1,37 @@
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.footer-section ul.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-section ul.links li{
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+.footer-section ul.links li:hover{
+  color: var(--blue);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-section p{
+  color: var(--text-sub);
+}
+
+@media (max-width: 800px){
+  .footer-section{
+    flex-direction: column;
+    gap: 15px;
+  }
+}

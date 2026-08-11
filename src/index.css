@@ -1,0 +1,162 @@
+/* ============================================
+   ROOT VARIABLES & THEME CONFIGURATION
+   ============================================ */
+:root {
+  /* Typography */
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+}
+
+/* Dark Theme Override */
+.dark{
+  /* Text Colors */
+  --text: #9f9fa9;
+  --text-sub: #71857a;
+  --text-h: #f4f4f5;
+  --text-l: #e4e4e7;
+
+  /* Background Colors */
+  --bg: #000000;
+  --container-bg: #18181b;
+  --sub-container-bg: #252529;
+  --modal-bg: rgba(40, 40, 48, 0.9);
+  --btn-bg: rgba(36, 37, 46, 1);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --input-bg: rgba(63, 63, 70, 0.15);
+
+  /* Borders & Shadows */
+  --border: #3f3f4666;
+  --card-border: rgba(93, 188, 252, 0.3);
+  --input-border: rgb(63 63 70);
+  --shadow: 0 8px 12px rgba(80, 80, 80, 0.25);
+  --focus-border: rgb(45 212 191);
+  --shadow-avatar: 2px 2px 40px rgba(255, 255, 255, 0.568) inset;
+
+  /* Accent Colors */
+  --blue: #5dbcfc;
+  --orange: rgb(244, 165, 96);
+  --red: crimson;
+ --error: #ff6b6b;
+  --success: #51cf66;
+  --pink: #ffacb6;
+  --icon-hover: #d4d4d8;
+  --btn-top: rgba(25, 118, 210, 0.85);
+  --btn-top-text: #f4f4f5;
+  --btn-top-hover: #1976d2;
+  --btn-top-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Light Theme Override */
+.light {
+  /* Text Colors */
+  --text: #5a5a66;
+  --text-sub: #6b8a7a;
+  --text-h: #1a1a1e;
+  --text-l: #2d2d35;
+
+  /* Background Colors */
+  --bg: #f8f9fa;
+  --container-bg: #ffffff;
+  --sub-container-bg: #eef0f2;
+  --modal-bg: rgba(240, 240, 245, 0.95);
+  --btn-bg: rgba(235, 236, 240, 1);
+  --card-bg: rgba(0, 0, 0, 0.04);
+  --input-bg: rgba(0, 0, 0, 0.06);
+
+  /* Borders & Shadows */
+  --border: #d4d4d8cc;
+  --card-border: rgba(93, 188, 252, 0.4);
+  --input-border: rgb(200, 200, 210);
+  --shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+  --focus-border: rgb(45, 212, 191);
+  --shadow-avatar: 2px 2px 40px rgba(0, 0, 0, 0.12) inset;
+
+  /* Accent Colors */
+  --blue: #4a9eff;
+  --orange: rgb(235, 150, 80);
+  --red: #dc143c;
+  --error:#dc3545;
+  --pink: #f5a0b0;
+  --success:#3ABC5E;
+  --icon-hover: #4a4a52;
+  --btn-top: rgba(25, 118, 210, 0.85);
+  --btn-top-text: #f4f4f5;
+  --btn-top-hover: #1976d2;
+  --btn-top-border: rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--sans);
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+/* Reset list, link, and button styles */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+button {
+  all: unset;
+}
+
+/* Interactive elements get pointer cursor */
+a,
+button {
+  cursor: pointer;
+}
+button.disabled{
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+/* ============================================
+   CSS scrollbar style
+   ============================================ */
+
+/* Then use them */
+::-webkit-scrollbar-track {
+  border: none;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0b0b8;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a8a92;
+}
+
+/* for Firefox */
+html {
+  scrollbar-color: #b0b0b8 #d4d4d8cc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
