@@ -22,9 +22,9 @@ A modern, responsive single-page portfolio built with **React** and **Vite**. It
 
 ## Screenshots
 
-```md
+
 ![Portfolio preview](./screenshot.PNG)
-```
+
 
 ---
 
