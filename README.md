@@ -22,10 +22,8 @@ A modern, responsive single-page portfolio built with **React** and **Vite**. It
 
 ## Screenshots
 
-> Add a screenshot of your page here to make the README more inviting.
-
 ```md
-![Portfolio preview](./screenshot.png)
+![Portfolio preview](./screenshot.PNG)
 ```
 
 ---
@@ -54,7 +52,7 @@ A modern, responsive single-page portfolio built with **React** and **Vite**. It
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/ayaabduljawad750-cyber/Portfolio
 cd portfolio
 
 # 2. Install dependencies
